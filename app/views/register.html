@@ -7,7 +7,7 @@
     validate-equals='password' required="">
   <p class="help-block" ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid"> Please match the passwords
   </p>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">
+  <button ng-disabled="register.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">
 			Submit
 		</button>
 </form>
