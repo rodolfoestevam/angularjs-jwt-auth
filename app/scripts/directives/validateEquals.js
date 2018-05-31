@@ -16,11 +16,11 @@ angular.module('angularjsJwtAuthApp').directive('validateEquals', function () {
         return valid ? value : undefined
       }
 
-      ngModelCtrl.$parsers.push(validateEqual);
-      ngModelCtrl.$formatters.push(validateEqual);
+      ngModelCtrl.$render(validateEqual);
+      ngModelCtrl.$render(validateEqual);
 
       scope.$watch(attrs.validateEquals, function () {
-        ngModelCtrl.$setViewvalue(ngModelCtrl.$setViewvalue);
+        ngModelCtrl = ngModelCtrl;
       })
     }
   };
